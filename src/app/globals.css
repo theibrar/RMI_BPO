@@ -1,0 +1,171 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-heading: var(--font-heading), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: var(--font-serif), 'Cinzel', Georgia, serif;
+}
+
+@layer base {
+  :root {
+    --corporate-navy: #0a1c42;
+    --corporate-navy-dark: #061129;
+    --corporate-navy-light: #12285a;
+
+    --corporate-gold: #b8860b;
+    --corporate-gold-accent: #c59a3f;
+    --corporate-gold-soft: #fcf8ee;
+    --corporate-gold-border: #e8d5a3;
+
+    --bg-white: #ffffff;
+    --bg-subtle: #f8fafc;
+    --bg-slate: #f1f5f9;
+
+    --text-primary: #0a1c42;
+    --text-secondary: #334155;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+  }
+
+  html, body {
+    background-color: #ffffff;
+    color: #334155;
+    font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+    line-height: 1.6;
+    letter-spacing: -0.011em;
+    overflow-x: hidden;
+    max-width: 100vw;
+    width: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: var(--font-heading), var(--font-inter), system-ui, sans-serif !important;
+    color: #0a1c42;
+    letter-spacing: -0.025em;
+    font-weight: 700;
+  }
+
+  p, span, a, button, input, textarea, select, li {
+    font-family: inherit;
+  }
+
+  ::selection {
+    background-color: #0a1c42;
+    color: #ffffff;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Crisp Corporate Cards */
+.pro-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px 0 rgba(10, 28, 66, 0.04);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pro-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 10px 20px -5px rgba(10, 28, 66, 0.08);
+  transform: translateY(-2px);
+}
+
+.pro-card-gold-top {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-top: 3px solid #b8860b;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px 0 rgba(10, 28, 66, 0.04);
+  transition: all 0.2s ease;
+}
+
+.pro-card-gold-top:hover {
+  border-color: #b8860b;
+  box-shadow: 0 10px 20px -5px rgba(184, 134, 11, 0.12);
+  transform: translateY(-2px);
+}
+
+/* High-Precision Buttons */
+.btn-navy {
+  background-color: #0a1c42;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  font-size: 0.875rem;
+  letter-spacing: -0.01em;
+  transition: all 0.18s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 1px 2px 0 rgba(10, 28, 66, 0.2);
+}
+
+.btn-navy:hover {
+  background-color: #12285a;
+  box-shadow: 0 4px 12px 0 rgba(10, 28, 66, 0.25);
+  transform: translateY(-1px);
+}
+
+.btn-gold {
+  background-color: #b8860b;
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  font-size: 0.875rem;
+  letter-spacing: -0.01em;
+  transition: all 0.18s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-shadow: 0 1px 2px 0 rgba(184, 134, 11, 0.25);
+}
+
+.btn-gold:hover {
+  background-color: #99751c;
+  box-shadow: 0 4px 12px 0 rgba(184, 134, 11, 0.35);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background-color: #ffffff;
+  color: #0a1c42;
+  border: 1px solid #cbd5e1;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  font-size: 0.875rem;
+  letter-spacing: -0.01em;
+  transition: all 0.18s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-outline:hover {
+  background-color: #f8fafc;
+  border-color: #0a1c42;
+  color: #0a1c42;
+  transform: translateY(-1px);
+}
